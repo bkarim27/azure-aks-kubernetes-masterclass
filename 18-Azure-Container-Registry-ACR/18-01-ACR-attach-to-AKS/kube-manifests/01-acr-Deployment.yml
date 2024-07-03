@@ -16,9 +16,7 @@ spec:
     spec:
       containers:
         - name: acrdemo-localdocker
-          image: acrforaksdemo2.azurecr.io/app1/kube-nginx-acr:v1
+          image: acrforaksdemo2bk.azurecr.io/app1/kube-nginx-acr:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 80
-
-   
