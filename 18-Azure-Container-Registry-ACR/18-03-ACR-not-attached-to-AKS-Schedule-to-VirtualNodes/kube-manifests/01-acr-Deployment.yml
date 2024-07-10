@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: acrdemo2ss-deployment
+  name: acrforaksdemo2bk-deployment
   labels:
-    app: acrdemo2ss
+    app: acrforaksdemo2bk
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: acrdemo2ss
+      app: acrforaksdemo2bk
   template:
     metadata:
       labels:
-        app: acrdemo2ss
+        app: acrforaksdemo2bk
     spec:
       containers:
-        - name: acrdemo2ss-vn
-          image: acrdemo2ss.azurecr.io/app3/acr-app3:v1 # Update Image Name 
+        - name: acrforaksdemo2bk-vn
+          image: acrforaksdemo2bk.azurecr.io/app3/acr-app3:v1 # Update Image Name 
           imagePullPolicy: Always
           ports:
             - containerPort: 80
       imagePullSecrets:   # Update Image Pull Secret Name we creted
-        - name: acrdemo2ss-secret  
-# To schedule pods on Azure Virtual Nodes            
+        - name: acrforaksdemo2bk-secret  
+# To schedule pods on Azure Virtual Nodes                    
       nodeSelector:
         kubernetes.io/role: agent
         beta.kubernetes.io/os: linux
@@ -31,7 +31,7 @@ spec:
       - key: virtual-kubelet.io/provider
         operator: Exists
       - key: azure.com/aci
-        effect: NoSchedule            
+        effect: NoSchedule              
 
 
    

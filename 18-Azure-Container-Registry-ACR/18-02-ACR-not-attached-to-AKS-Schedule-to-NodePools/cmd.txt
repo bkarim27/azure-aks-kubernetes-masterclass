@@ -1,0 +1,5 @@
+kubectl create secret docker-registry acrdemo2ss-secret \
+    --namespace default \
+    --docker-server=acrdemo2ssbk.azurecr.io \
+    --docker-username=750fc3cf-116c-4e7b-9edf-46cf72ea9bd8 \
+    --docker-password=CYC8Q~pdkA5rFlfusapwF~2_s91_jSPNBU3z2bmr 

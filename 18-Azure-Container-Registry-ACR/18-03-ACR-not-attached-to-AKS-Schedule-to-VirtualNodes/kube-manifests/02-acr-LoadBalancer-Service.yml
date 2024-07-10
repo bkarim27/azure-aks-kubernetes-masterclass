@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: acrdemo2ss-loadbalancer-service
+  name: acrforaksdemo2bk-loadbalancer-service
   labels:
-    app: acrdemo2ss
+    app: acrforaksdemo2bk
 spec:
   type: LoadBalancer
   selector:
-    app: acrdemo2ss
+    app: acrforaksdemo2bk
   ports:
     - port: 80
       targetPort: 80
